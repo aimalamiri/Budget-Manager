@@ -1,0 +1,2 @@
+class Truckage < ApplicationRecord
+end
