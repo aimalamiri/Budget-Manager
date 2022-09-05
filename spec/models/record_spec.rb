@@ -21,4 +21,9 @@ RSpec.describe 'Record', type: :model do
     @record.amount = nil
     expect(@record).to_not be_valid
   end
+
+  it 'amount must be an integer' do
+    @record.amount = 'one'
+    expect(@record).to_not be_valid
+  end
 end
