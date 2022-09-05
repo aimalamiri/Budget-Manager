@@ -8,4 +8,9 @@ RSpec.describe "User", type: :model do
     subject.name = ''
     expect(subject).to_not be_valid
   end
+
+  it "name should not be over 255 chars" do
+    subject.name = 'aaa'*100
+    expect(subject).to_not be_valid
+  end
 end
