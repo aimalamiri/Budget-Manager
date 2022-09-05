@@ -1,24 +1,58 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Budget Manager
 
-Things you may want to cover:
+This is a simple appliction built with ruby on rails to manage your budget, designed for the mobile screens.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Rails 7.0
+- Bootstrap 5
+- Rspec
 
-* Configuration
+## Getting Started
 
-* Database creation
+To get a local copy up and running follow these simple steps.
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+- Make sure you already installed Ruby version 3 or higher and Git.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Setup
 
-* Deployment instructions
+Clone the repository using the below commands.
 
-* ...
+- `git clone git@github.com:aimalamiri/Budget-Manager.git `
+- `cd Budget-Manger`
+- `cp .env.example .env`
+- `Add your credentials to .env file`
+- `rails db:create db:migrate`
+- `rails server`
+
+### Usage
+
+Kindly modify the files as needed.
+
+## Author
+
+👤 **Aimal Aimiri**
+
+- GitHub: [@aimalamiri](https://github.com/aimalamiri)
+- Twitter: [@meaimal](https://twitter.com/meaimal)
+- LinkedIn: [Aimal Amiri](https://linkedin.com/in/aimal-amiri)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/aimalamiri/Budget-Manager/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
