@@ -13,7 +13,7 @@ RSpec.describe 'Record', type: :model do
   end
 
   it 'name length must be less then 255 characters' do
-    @record.name = 'aaa'*255
+    @record.name = 'aaa' * 255
     expect(@record).to_not be_valid
   end
 

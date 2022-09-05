@@ -13,7 +13,7 @@ RSpec.describe 'Category', type: :model do
   end
 
   it 'name must be less then 255 chars' do
-    @category.name = 'aaa'*255
+    @category.name = 'aaa' * 255
     expect(@category).to_not be_valid
   end
 
@@ -23,7 +23,7 @@ RSpec.describe 'Category', type: :model do
   end
 
   it 'icon must be less then 255 chars' do
-    @category.icon = 'aaa'*255
+    @category.icon = 'aaa' * 255
     expect(@category).to_not be_valid
   end
 end
