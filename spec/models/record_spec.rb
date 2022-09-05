@@ -16,4 +16,9 @@ RSpec.describe 'Record', type: :model do
     @record.name = 'aaa'*255
     expect(@record).to_not be_valid
   end
+
+  it 'amount must be present' do
+    @record.amount = nil
+    expect(@record).to_not be_valid
+  end
 end
