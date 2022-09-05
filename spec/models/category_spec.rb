@@ -11,4 +11,9 @@ RSpec.describe 'Category', type: :model do
     @category.name = ''
     expect(@category).to_not be_valid
   end
+
+  it 'name must be less then 255 chars' do
+    @category.name = 'aaa'*255
+    expect(@category).to_not be_valid
+  end
 end
