@@ -8,7 +8,12 @@ RSpec.describe 'Record', type: :model do
   end
 
   it 'name must be present' do
-    @record.amount = nil
+    @record.name = nil
+    expect(@record).to_not be_valid
+  end
+
+  it 'name length must be less then 255 characters' do
+    @record.name = 'aaa'*255
     expect(@record).to_not be_valid
   end
 end
