@@ -16,4 +16,9 @@ RSpec.describe 'Category', type: :model do
     @category.name = 'aaa'*255
     expect(@category).to_not be_valid
   end
+
+  it 'icon is required' do
+    @category.icon = ''
+    expect(@category).to_not be_valid
+  end
 end
