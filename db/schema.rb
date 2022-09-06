@@ -24,8 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_132214) do
   end
 
   create_table "record_categories", id: false, force: :cascade do |t|
+    t.bigint "record_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_record_categories_on_category_id"
+    t.index ["record_id"], name: "index_record_categories_on_record_id"
   end
 
   create_table "records", force: :cascade do |t|
@@ -51,5 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_132214) do
   end
 
   add_foreign_key "categories", "users"
+  add_foreign_key "record_categories", "categories"
+  add_foreign_key "record_categories", "records"
   add_foreign_key "records", "users"
 end
