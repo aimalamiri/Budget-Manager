@@ -1,5 +1,10 @@
 $primary-color: #6c63ff;
 // Entry point for your Sass build
+
+body {
+  background-color: #eee;
+}
+
 .bg-primary {
   background-color: $primary-color !important;
 }

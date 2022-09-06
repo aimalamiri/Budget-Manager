@@ -4,4 +4,12 @@ class Category < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 255 }
   validates :icon, presence: true, length: { maximum: 255 }
+
+  def total_budget
+    total = 0
+    records.each do |record|
+      total += record.amount
+    end
+    total
+  end
 end

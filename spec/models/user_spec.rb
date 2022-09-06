@@ -1,7 +1,7 @@
 require_relative '../rails_helper'
 
 RSpec.describe 'User', type: :model do
-  subject { User.new(name: 'Aimal') }
+  subject { User.new(name: 'Aimal', email: 'test@test.com', password: 'password') }
   before { subject.save! }
 
   it 'name is required' do
