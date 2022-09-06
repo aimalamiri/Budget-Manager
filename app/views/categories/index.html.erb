@@ -1,4 +1,7 @@
 <h1 class="fw-bold mb-5">Categories</h1>
+<div class="d-flex justify-content-end mb-2">
+  <a class="btn btn-outline-success" href="<%= new_category_path %>"><i class="fa fa-plus"></i> Add Category</a>
+</div>
 <% @categories.each do |category| %>
   <div class="card mb-3">
     <div class="d-flex p-4">
@@ -10,6 +13,7 @@
           </div>
           <div class="fw-bold"><%= category.total_budget %>$</div>
         </div>
+        <hr>
         <span class="text-secondary"><%= category.created_at.strftime("%d %m %Y")%></span>
       </div>
     </div>
