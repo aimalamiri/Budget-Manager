@@ -1,0 +1,17 @@
+<%= render 'includes/second_navigation', back_link: '/', title: @category.name %>
+
+<div class="d-flex justify-content-between align-items-center mb-2">
+  <div class="h3 ">Total: <span class="fw-bold"><%= @category.total_budget %>$</span></div>
+  <a class="btn btn-outline-success" href="<%= new_transaction_path %>"><i class="fa fa-plus"></i> Add Transaction</a>
+</div>
+
+<% @category.records.each do |transaction| %>
+  <div class="card mb-2">
+    <div class="card-header">
+      <%= transaction.name %>
+    </div>
+    <div class="card-body">
+      <%= transaction.amount %>$
+    </div>
+  </div>
+<% end %>

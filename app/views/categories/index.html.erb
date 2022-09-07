@@ -1,0 +1,23 @@
+<h1 class="fw-bold mb-5">Categories</h1>
+<div class="d-flex justify-content-end mb-2">
+  <a class="btn btn-outline-success" href="<%= new_category_path %>"><i class="fa fa-plus"></i> Add Category</a>
+</div>
+<% @categories.each do |category| %>
+  <a href="<%= category_transactions_path(category.id) %>" class="text-decoration-none text-dark">
+    <div class="card mb-3">
+      <div class="d-flex p-4">
+        <i class="fa-solid <%= category.icon %> fa-4x"></i>
+        <div class="w-100 px-3 d-flex flex-column justify-content-between">
+          <div class="d-flex justify-content-between items-center ">
+            <div class="text-secondary">
+              <%= category.name %>
+            </div>
+            <div class="fw-bold"><%= category.total_budget %>$</div>
+          </div>
+          <hr>
+          <span class="text-secondary"><%= category.created_at.strftime("%e %b %Y") %></span>
+        </div>
+      </div>
+    </div>
+  </a>
+<% end %>

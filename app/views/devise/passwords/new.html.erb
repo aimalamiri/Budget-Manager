@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: #eee;">
+<section class="vh-100">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
@@ -13,7 +13,7 @@
                   <%= render "devise/shared/error_messages", resource: resource %>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg fa-fw"></i>
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
                       <%= f.label :email, 'Your email', class: 'form-label' %>

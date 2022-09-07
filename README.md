@@ -2,7 +2,7 @@
 
 # Budget Manager
 
-This is a simple appliction built with ruby on rails to manage your budget, designed for the mobile screens.
+Budget manager is a simple and useful application that can help you to manage your budget. You can create a new account and begin by adding some categories that has a meaning to you. You'll than be able to add new transactions to keep track of your expenses and income in a simple and organized way.
 
 ## Built With
 
@@ -25,9 +25,8 @@ Clone the repository using the below commands.
 
 - `git clone git@github.com:aimalamiri/Budget-Manager.git `
 - `cd Budget-Manger`
-- `cp .env.example .env`
-- `Add your credentials to .env file`
 - `rails db:create db:migrate`
+- `rails css:build`
 - `rails server`
 
 ### Usage
@@ -41,6 +40,11 @@ Kindly modify the files as needed.
 - GitHub: [@aimalamiri](https://github.com/aimalamiri)
 - Twitter: [@meaimal](https://twitter.com/meaimal)
 - LinkedIn: [Aimal Amiri](https://linkedin.com/in/aimal-amiri)
+
+## Credits
+- Original Design Idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+- Graphics by [Undraw Illustrations](https://undraw.co/illustrations)
+- And all of the open source tools and library creators
 
 
 ## 🤝 Contributing

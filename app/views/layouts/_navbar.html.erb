@@ -1,0 +1,41 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/">Budget Manager</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-primary" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Budget Manager</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item mt-2">
+              <a class="nav-link" href="<%= categories_path %>">Categories</a>
+            </li>
+            <li class="nav-item mt-2">
+              <%= button_to(
+                    "Log Out",
+                    destroy_user_session_path,
+                    method: :delete,
+                    class: 'btn btn-danger'
+                  ) %>
+            </li>
+          <% else %>
+            <li class="nav-item mt-2">
+              <a class="btn btn-success" href="<%= new_user_session_path %>">Login</a>
+            </li>
+            <li class="nav-item mt-2">
+              <a class="btn btn-info" href="<%= new_user_registration_path %>">Register</a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
