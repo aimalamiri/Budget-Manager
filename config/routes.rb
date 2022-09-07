@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   root "categories#index"
 
   resources 'categories', only: %w[index new create] do
-    resources 'transactions', only: %w[index new create]
+    resources 'transactions', only: %w[index]
   end
+
+  resources 'transactions', only: %w[new create]
 end

@@ -6,25 +6,25 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @category = Category.find(params[:category_id])
+    @categories = Category.all
     @transaction = Record.new
   end
 
   def create
-
-    @record = current_user.records.new(record_params)
+    categories = params['record']['category_id']
+    name = params['record']['name']
+    amount = params['record']['amount']
+    @record = current_user.records.new(name: name, amount: amount)
 
     if @record.save
-      @record_category = RecordCategory.create(category_id: params[:category_id], record_id: @record.id)
-      redirect_to category_transactions_path @record_category.category_id, flash: { success: "#{@record.name} has been successfully created!" }
+      categories.each do |category|
+        RecordCategory.create(category_id: category.to_i, record_id: @record.id) if category != ''
+      end
+      redirect_to category_transactions_path categories[categories.size - 1].to_i,
+                                             flash: { success: "#{@record.name} has been successfully created!" }
     else
-      redirect_to new_category_transaction_path @record_category.category_id, flash: { error: @record.errors.full_messages }
+      redirect_to new_category_transaction_path categories[categories.size - 1].to_i,
+                                                flash: { error: @record.errors.full_messages }
     end
-  end
-
-  private
-
-  def record_params
-    params.require(:record).permit(:name, :amount)
   end
 end
