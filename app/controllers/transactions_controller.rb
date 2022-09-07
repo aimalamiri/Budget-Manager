@@ -14,7 +14,7 @@ class TransactionsController < ApplicationController
     categories = params['record']['category_id']
     name = params['record']['name']
     amount = params['record']['amount']
-    @record = current_user.records.new(name: name, amount: amount)
+    @record = current_user.records.new(name:, amount:)
 
     if @record.save
       categories.each do |category|
