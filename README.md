@@ -41,6 +41,11 @@ Kindly modify the files as needed.
 - Twitter: [@meaimal](https://twitter.com/meaimal)
 - LinkedIn: [Aimal Amiri](https://linkedin.com/in/aimal-amiri)
 
+## Credits
+- Original Design Idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+- Graphics by [Undraw Illustrations](https://undraw.co/illustrations)
+- And all of the open source tools and library creators
+
 
 ## 🤝 Contributing
 
