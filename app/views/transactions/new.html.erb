@@ -8,7 +8,7 @@
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Record a new transaction</p>
-                <%= form_with model: @transaction, url: new_category_transaction_path(@category.id), class: 'mx-1 mx-md-4' do |f| %>
+                <%= form_with model: @transaction, url: category_transactions_path(@category.id), class: 'mx-1 mx-md-4' do |f| %>
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
                       <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control' %>
