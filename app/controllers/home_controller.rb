@@ -1,0 +1,8 @@
+class HomeController < ApplicationController
+  def index
+    if user_signed_in?
+      @categories = current_user.categories
+      render 'categories/index'
+    end
+  end
+end
