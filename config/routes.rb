@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "categories#index"
 
-  resources 'categories', only: %w[index new create]
+  resources 'categories', only: %w[index new create] do
+    resources 'transactions', only: %w[index new create]
+  end
 end
