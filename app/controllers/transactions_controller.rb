@@ -23,8 +23,7 @@ class TransactionsController < ApplicationController
       redirect_to category_transactions_path categories[categories.size - 1].to_i,
                                              flash: { success: "#{@record.name} has been successfully created!" }
     else
-      redirect_to new_category_transaction_path categories[categories.size - 1].to_i,
-                                                flash: { error: @record.errors.full_messages }
+      redirect_to new_transaction_path, flash: { error: @record.errors.full_messages }
     end
   end
 end

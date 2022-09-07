@@ -24,6 +24,18 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+<% if flash[:success] %>
+  <p class="alert alert-success"><%= sanitize(flash[:success]) %></p>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+  <ul>
+    <% flash[:error].each do |e| %>
+      <li><%= e %></li>
+    <% end %>
+  </ul>
+  </div>
+<% end %>
 <div class="container py-3">
   <%= yield %>
 </div>
