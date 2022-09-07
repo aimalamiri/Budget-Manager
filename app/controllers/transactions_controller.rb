@@ -6,7 +6,7 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @categories = Category.all
+    @categories = current_user.categories
     @transaction = Record.new
   end
 
