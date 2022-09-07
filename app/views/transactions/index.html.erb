@@ -1,4 +1,5 @@
-<h1 class="fw-bold mb-5">Transactions</h1>
+<%= render 'includes/second_navigation', back_link: '/', title: @category.name %>
+
 <div class="d-flex justify-content-end mb-2">
   <a class="btn btn-outline-success" href="<%= new_transaction_path %>"><i class="fa fa-plus"></i> Add Transaction</a>
 </div>
