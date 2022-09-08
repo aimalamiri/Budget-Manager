@@ -21,4 +21,10 @@ RSpec.describe 'Transactions Page', type: :system do
     visit category_transactions_path(@category.id)
     expect(page).to have_content(@transaction.amount)
   end
+
+  it 'returns the new transactions form page when the user clicks on the Add Transaction button' do
+    visit category_transactions_path(@category.id)
+    find('#new-transaction').click
+    expect(page).to have_content('Record a new transaction')
+  end
 end
