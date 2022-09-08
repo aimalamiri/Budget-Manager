@@ -4,6 +4,9 @@
 
 Budget manager is a simple and useful application that can help you to manage your budget. You can create a new account and begin by adding some categories that has a meaning to you. You'll than be able to add new transactions to keep track of your expenses and income in a simple and organized way.
 
+## Live Demo
+Here is a [link](https://pacific-oasis-54849.herokuapp.com/) to the live demo of this application
+
 ## Built With
 
 - Ruby
