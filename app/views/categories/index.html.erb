@@ -1,6 +1,6 @@
 <h1 class="fw-bold mb-5">Categories</h1>
 <div class="d-flex justify-content-end mb-2">
-  <a class="btn btn-outline-success" href="<%= new_category_path %>"><i class="fa fa-plus"></i> Add Category</a>
+  <a class="btn btn-outline-success" href="<%= new_category_path %>" id="new-category"><i class="fa fa-plus"></i> Add Category</a>
 </div>
 <% @categories.each do |category| %>
   <a href="<%= category_transactions_path(category.id) %>" class="text-decoration-none text-dark">
