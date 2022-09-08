@@ -1,1 +1,21 @@
+$primary-color: #3778c2;
 // Entry point for your Sass build
+
+body {
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.text-bg-primary {
+  color: #fff !important;
+  background-color: $primary-color !important;
+}
+
+.btn-primary {
+  background-color: $primary-color !important;
+  border: 1px solid $primary-color !important;
+}
