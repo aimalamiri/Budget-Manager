@@ -59,7 +59,10 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
   # Test related gems
+  gem 'capybara'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 group :development do
