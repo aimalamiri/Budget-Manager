@@ -16,4 +16,9 @@ RSpec.describe 'Transactions Page', type: :system do
     visit category_transactions_path(@category.id)
     expect(page).to have_content(@transaction.name)
   end
+
+  it 'has the transaction amount' do
+    visit category_transactions_path(@category.id)
+    expect(page).to have_content(@transaction.amount)
+  end
 end
