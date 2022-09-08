@@ -60,6 +60,8 @@ group :development, :test do
 
   # Test related gems
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'webdrivers'
 end
 
 group :development do
